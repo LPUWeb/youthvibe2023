@@ -137,6 +137,18 @@ body {
     padding: 20px;
 }
 
+@media screen and (max-width: 800px) {
+    .field-container {
+        max-width: 70vw;
+        /* width: 100%; */
+    }
+
+    .section-info>h4 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
 .field-container>.label {
     width: 30%;
     display: flex;
