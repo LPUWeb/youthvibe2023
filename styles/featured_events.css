@@ -131,9 +131,20 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
 @media screen and (max-width: 768px) {
-    .featured-events-container{
-        display: none;
+
+
+    .event-carousel-item {
+        flex-direction: column;
     }
 
+    .event-carousel-item>.right {
+        width: 100%;
+    }
+
+    .event-carousel-item>.left {
+        width: 100%;
+        padding: 0;
+    }
 }
