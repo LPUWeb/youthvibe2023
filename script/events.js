@@ -15,6 +15,9 @@ window.onload = async function() {
     const events_req = await fetch(events_route);
     const events_data = await events_req.json();
     console.log(events_data);
+    document.querySelectorAll('.skeleton-card').forEach((el) => {
+        el.style.display = "none";
+    });
 
 
     
