@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.landing {
+    background: url(./assets/bg.jpg) no-repeat center center/cover;
+    position: relative;
+}
+
+.landing>.bgvideo-container {
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .bgvideo-container video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .bgvideo-container video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.landing>.backdrop {
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.landing>.backdrop>.content {
+    display: grid;
+    height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .landing>.backdrop>.content {
+        grid-auto-columns: minmax(0, 1fr);
+        grid-auto-flow: column;
+    }
+
+    .landing>.backdrop>.content>.left {
+        grid-column: 1;
+
+        position: relative;
+        background-color: rgba(0, 255, 255, 0.082);
+    }
+
+    .landing>.backdrop>.content>.right {
+        grid-column: 2;
+        background-color: rgba(255, 0, 0, 0.156);
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .landing>.backdrop>.content>.right {
+        grid-row: 1;
+        background-color: rgba(255, 0, 0, 0.156);
+
+    }
+
+    .landing>.backdrop>.content>.left {
+        grid-row: 2;
+        position: relative;
+        background-color: rgba(0, 255, 255, 0.082);
+
+    }
+
+
+}
+
+.landing>.backdrop>.content>.left>.img-container {
+    width: 28vw;
+    height: calc(0.58 * 28vw);
+    min-width: 290px;
+    min-height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-image: url(./assets/yvlpu.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 10px #000;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-60%, -60%);
+}
+
+.landing>.backdrop>.content>.left>.vid-container {
+    width: 28vw;
+    height: calc(0.58 * 28vw);
+    min-width: 290px;
+    min-height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-image: url(./assets/YV2015.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 10px #000;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-10%, -10%);
+}
+
+.landing>.backdrop>.content>.left>.vid-container>.landing-vid-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+.landing>.backdrop>.content>.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.landing>.backdrop>.content>.right>.intro>img {
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.landing>.backdrop>.content>.right>.intro>button {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(9, 9, 9, 0.8);
+    cursor: pointer;
+}

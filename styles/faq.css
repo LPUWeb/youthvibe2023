@@ -1,0 +1,106 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    scroll-behavior: smooth;
+    box-sizing: content-box !important;
+}
+
+body {
+    background-color: #000 !important;
+    margin: 0;
+    padding: 0;
+
+}
+
+ul {
+    margin: 0 !important;
+}
+
+.faq-container {
+    transform: translateY(80px);
+    background-image: radial-gradient(circle, #051937, #171228, #190a1a, #12040d, #000000);
+
+}
+
+.faq-container>h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 50px;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-container>.faqs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.faq-container>.faqs>.faq-element {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 680px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    background-color: rgba(16, 16, 16, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.faq-container>.faqs>.faq-element>.faq {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.faq-container>.faqs>.faq-element>.faq>.question {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.faq-container>.faqs>.faq-element>.faq>.open-icon {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.faq-container>.faqs>.faq-element>.faq>.close-icon {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.faq-container>.faqs>.faq-element>.answer {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+}

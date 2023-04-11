@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Youthvibe | LPU's Global Open Fest</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="dat.gui.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="./owl-carousel/owl.carousel.js"></script>
+
+
+
+    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/register.css">
+    <link rel="stylesheet" href="./styles/marquee.css">
+</head>
+
+<body>
+    <div class="marquee owl-carousel owl-theme">
+        <div>YOUTHVIBE 2023 Coming Soon!</div>
+        <div>LPU's Largest Open Fest</div>
+        <div><a style="text-decoration: none;" href="/register.html">Register Now</a></div>
+    </div>
+    <nav id="navigation">
+
+
+    </nav>
+
+    <div class="container">
+        <div class="title">
+            <h1>Register Now!</h1>
+        </div>
+        <div class="form-container">
+            <div class="tab-button-container">
+                <button id="individual_button" style="background-color: #ff0000;">Individual</button>
+                <button id="team_button">Team</button>
+            </div>
+            <div class="individual-form" id="individual_form">
+                <div class="section-info">
+                    <h4>Enter Participant Details:</h4>
+                </div>
+                <div class="individual-details-container">
+                    <div class="field-container">
+                        <span class="label">First Name:</span>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div class="field-container">
+                        <span class="label">Last Name:</span>
+                        <input type="text" placeholder="Last Name">
+                    </div>
+
+                    <div class="field-container">
+                        <span class="label">Email:</span>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="field-container">
+                        <span class="label">Phone Number:</span>
+                        <input type="tel" placeholder="Phone Number">
+                    </div>
+
+                    <div class="field-container">
+                        <span class="label">College / University:</span>
+                        <input type="text" placeholder="College">
+                    </div>
+
+                    <div class="field-container">
+                        <span class="label">Address:</span>
+                        <textarea name="address" id="" cols="10" rows="30"></textarea>
+
+                    </div>
+                    <div class="field-container">
+                        <span class="label">City:</span>
+                        <input type="text" placeholder="City">
+                    </div>
+                    <div class="field-container">
+                        <span class="label">State:</span>
+                        <select name="state">
+                            <option value="">Select a State</option>
+                            <option value="AN">Andaman and Nicobar Islands</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="AR">Arunachal Pradesh</option>
+                            <option value="AS">Assam</option>
+                            <option value="BR">Bihar</option>
+                            <option value="CG">Chhattisgarh</option>
+                            <option value="CH">Chandigarh</option>
+                            <option value="DN">Dadra and Nagar Haveli and Daman and Diu</option>
+                            <option value="DL">Delhi</option>
+                            <option value="GA">Goa</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="HR">Haryana</option>
+                            <option value="HP">Himachal Pradesh</option>
+                            <option value="JK">Jammu and Kashmir</option>
+                            <option value="JH">Jharkhand</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="KL">Kerala</option>
+                            <option value="LD">Lakshadweep</option>
+                            <option value="MP">Madhya Pradesh</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="MN">Manipur</option>
+                            <option value="ML">Meghalaya</option>
+                            <option value="MZ">Mizoram</option>
+                            <option value="NL">Nagaland</option>
+                            <option value="OR">Odisha</option>
+                            <option value="PY">Puducherry</option>
+                            <option value="PB">Punjab</option>
+                            <option value="RJ">Rajasthan</option>
+                            <option value="SK">Sikkim</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="TG">Telangana</option>
+                            <option value="TR">Tripura</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="UT">Uttarakhand</option>
+                            <option value="WB">West Bengal</option>
+                        </select>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="section-info">
+                    <h4>Select Events You Wish To Participate In:</h4>
+                </div>
+                <div class="individual-event-selector">
+                    <div class="category-container">
+                        <div class="event-category-name">DANCE </div>
+                        <div class="event-options">
+                            <div class="event-option">
+                                <input type="checkbox" name="Nritya_Natraj" id="Nritya_Natraj">
+                                <label for="Nritya_Natraj">Nritya Natraj</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-container">
+                        <div class="event-category-name">MUSIC </div>
+                        <div class="event-options">
+                            <div class="event-option">
+                                <input type="checkbox" name="Voice_of_Youth_Vibe" id="Voice_of_Youth_Vibe">
+                                <label for="Voice_of_Youth_Vibe">Voice of
+                                    Youth Vibe</label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" name="DJ_War" id="DJ_War">
+                                <label for="DJ_War">DJ War</label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" name="RapstarRap" id="RapstarRap">
+                                <label for="RapstarRap">THE FUSION-Beat boxing/RapstarRap Singing</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-container">
+                        <div class="event-category-name">LifeStyle </div>
+                        <div class="event-options">
+                            <div class="event-option">
+                                <input type="checkbox" name="mr_ms_yv" id="mr_ms_yv">
+                                <label for="mr_ms_yv">Mr. & Ms. Youth Vibe</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="category-container">
+                        <div class="event-category-name">SPORTS </div>
+                        <div class="event-options">
+                            <div class="event-option">
+                                <input type="checkbox" name="badminton_female" id="badminton_female">
+                                <label for="badminton_female">Badminton (Female)</label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" name="badminton_male" id="badminton_male">
+                                <label for="badminton_male">Badminton Mania (Male)</label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" name="chess" id="chess">
+                                <label for="chess">Clash of titans (Chess)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-container">
+                        <div class="event-category-name">LITERARY </div>
+                        <div class="event-options">
+                            <div class="event-option">
+                                <input type="checkbox" name="imun" id="imun">
+                                <label for="imun">IMUN</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit-button-container">
+                    <button type="submit" id="individual_submit_button" class="submit-button">Submit</button>
+                </div>
+            </div>
+            <div class="team-form" id="team_form">
+                <div class="section-info">
+                    <h4>Enter Team Leader's and Member's Details:</h4>
+                </div>
+                <div class="team-details-container">
+                    <div class="field-container">
+                        <span class="label">Team Leader's First Name:</span>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div class="field-container">
+                        <span class="label">Team Leader's Last Name:</span>
+                        <input type="text" placeholder="Last Name">
+                    </div>
+
+                    <div class="field-container">
+                        <span class="label">Team Leader's Email:</span>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="field-container">
+                        <span class="label">Team Leader's Phone Number:</span>
+                        <input type="tel" placeholder="Phone Number">
+                    </div>
+
+                    <div class="field-container">
+                        <span class="label">Team's College / University:</span>
+                        <input type="text" placeholder="College">
+                    </div>
+
+                    <div class="field-container">
+                        <span class="label">Team Leader's Address:</span>
+                        <textarea name="address" id="" cols="10" rows="30"></textarea>
+                    </div>
+                    <div class="field-container">
+                        <span class="label">Team's City:</span>
+                        <input type="text" placeholder="City">
+                    </div>
+                    <div class="field-container">
+                        <span class="label">Team's State:</span>
+                        <select name="state">
+                            <option value="">Select a State</option>
+                            <option value="AN">Andaman and Nicobar Islands</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="AR">Arunachal Pradesh</option>
+                            <option value="AS">Assam</option>
+                            <option value="BR">Bihar</option>
+                            <option value="CG">Chhattisgarh</option>
+                            <option value="CH">Chandigarh</option>
+                            <option value="DN">Dadra and Nagar Haveli and Daman and Diu</option>
+                            <option value="DL">Delhi</option>
+                            <option value="GA">Goa</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="HR">Haryana</option>
+                            <option value="HP">Himachal Pradesh</option>
+                            <option value="JK">Jammu and Kashmir</option>
+                            <option value="JH">Jharkhand</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="KL">Kerala</option>
+                            <option value="LD">Lakshadweep</option>
+                            <option value="MP">Madhya Pradesh</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="MN">Manipur</option>
+                            <option value="ML">Meghalaya</option>
+                            <option value="MZ">Mizoram</option>
+                            <option value="NL">Nagaland</option>
+                            <option value="OR">Odisha</option>
+                            <option value="PY">Puducherry</option>
+                            <option value="PB">Punjab</option>
+                            <option value="RJ">Rajasthan</option>
+                            <option value="SK">Sikkim</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="TG">Telangana</option>
+                            <option value="TR">Tripura</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="UT">Uttarakhand</option>
+                            <option value="WB">West Bengal</option>
+                        </select>
+                    </div>
+
+                    <div class="field-container">
+                        <span class="label">Select Team Size:</span>
+                        <select name="team-size" id="team_size_selector">
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="team-members-container" id="member_container">
+
+                </div>
+                <hr>
+                <div class="section-info">
+                    <h4>Select Events You Wish To Participate In:</h4>
+                </div>
+                <div class="individual-event-selector">
+                    <div class="category-container">
+                        <div class="event-category-name">DANCE </div>
+                        <div class="event-options">
+                            <div class="event-option">
+                                <input type="checkbox" name="Virasat" id="Virasat">
+                                <label for="Virasat">Virasat - GROUP
+                                    (Folk Group Dance / Freestyle)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-container">
+                        <div class="event-category-name">MUSIC </div>
+                        <div class="event-options">
+                            <div class="event-option">
+                                <input type="checkbox" name="Virsa" id="Virsa">
+                                <label for="Virsa">Virsa (Folk Group Singing) </label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" name="limit_zero" id="limit_zero">
+                                <label for="limit_zero">Limit Zero: Battle of the Bands</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="category-container">
+                        <div class="event-category-name">LifeStyle </div>
+                        <div class="event-options">
+                            <div class="event-option">
+                                <input type="checkbox" name="Designer_Spotlight" id="Designer_Spotlight">
+                                <label for="Designer_Spotlight">Designer Spotlight</label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" name="Paridhan" id="Paridhan">
+                                <label for="Paridhan">Paridhan: The Fashion Parade</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="category-container">
+                        <div class="event-category-name">E-Sports </div>
+                        <div class="event-options">
+                            <div class="event-option">
+                                <input type="checkbox" disabled name="CODM" id="CODM">
+                                <label for="CODM">Crossfire -
+                                    CODM Invitational</label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" disabled name="Valorant" id="Valorant">
+                                <label for="Valorant">First
+                                    Light - Valorant Invitational</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="category-container">
+                        <div class="event-category-name">SPORTS </div>
+                        <div class="event-options">
+                            <div class="event-option">
+                                <input type="checkbox" name="badminton_female_duo" id="badminton_female_duo">
+                                <label for="badminton_female_duo">Badminton Female (Duo)</label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" name="badminton_male_duo" id="badminton_male_duo">
+                                <label for="badminton_male_duo">Badminton Male (Duo)</label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" name="Futsal" id="Futsal">
+                                <label for="Futsal">Futsal (Male)</label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" name="Volleyball" id="Volleyball">
+                                <label for="Volleyball">Volleyball Championship
+                                    (Male)</label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" name="Basketball" id="Basketball">
+                                <label for="Basketball">3 on 3 Basketball
+                                    Championship (Male)</label>
+                            </div>
+                            <div class="event-option">
+                                <input type="checkbox" name="Cricket" id="Cricket">
+                                <label for="Cricket">Box Cricket (Male)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="submit-button-container">
+                    <button type="submit" id="team_submit_button" class="submit-button">Submit</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+<script src="./script/nav.js" defer></script>
+<script src="./script/marquee.js"></script>
+<script src="./script/register.js" defer></script>
+
+</html>

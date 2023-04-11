@@ -1,0 +1,292 @@
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000 !important;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.container {
+    transform: translateY(100px);
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container>.title>h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    width: 850px;
+    max-width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: rgba(234, 234, 234, 0.8); */
+    /* padding: 20px; */
+    border: 1px solid #a30000;
+    border-radius: 5px;
+}
+
+.form-container>.tab-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* margin-bottom: 20px; */
+}
+
+.individual-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* display: none; */
+    /* margin-bottom: 20px; */
+}
+
+.team-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    /* display: none; */
+    /* margin-bottom: 20px; */
+}
+
+.form-container>.individual-form>hr {
+    width: 40%;
+    height: 2px;
+    background: #ff0000;
+    border: none;
+    margin: 0;
+}
+
+.tab-button-container>button {
+    width: 50%;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-bottom: 1px solid #a30000;
+    border-left: 1px solid #a30000;
+}
+
+.tab-button-container>button:hover {
+    background: rgb(255, 0, 0);
+    color: #fff;
+}
+
+.individual-details-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    /* padding: 10px; */
+}
+
+@media screen and (max-width: 800px) {
+    .individual-details-container {
+        flex-direction: column;
+    }
+}
+
+
+
+.field-container {
+    /* width: 100%; */
+    width: 300px;
+    /* border: 1px solid #a30000; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* margin: 20px; */
+    padding: 20px;
+}
+
+.field-container>.label {
+    width: 30%;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    /* justify-content: flex-end; */
+    align-items: center;
+    flex-direction: row;
+    margin-right: 10px;
+}
+
+.field-container>input {
+    width: 60%;
+    height: 40px;
+    border-bottom: 1px solid rgb(255, 255, 255) !important;
+    border: none;
+    outline: none;
+    border-radius: 1px;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #000000;
+}
+
+.field-container>input:focus {
+    border-bottom: 1px solid rgb(219, 0, 0) !important;
+}
+
+.field-container>textarea {
+    width: 60%;
+    height: 45px;
+    border: 1px solid rgb(255, 255, 255) !important;
+    border: none;
+    outline: none;
+    border-radius: 1px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #000000;
+}
+
+.field-container>textarea:focus {
+    border: 1px solid rgb(219, 0, 0) !important;
+}
+
+.field-container>select {
+    width: 80%;
+    height: 40px;
+    border: 1px solid rgb(255, 255, 255) !important;
+    border: none;
+    outline: none;
+    border-radius: 1px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #000000;
+}
+
+.field-container>select:focus {
+    border: 1px solid rgb(219, 0, 0) !important;
+}
+
+.individual-event-selector {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+}
+
+.category-container {
+    margin: 20px;
+}
+
+.event-category-name {
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.event-options {
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.event-option {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.team-details-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    /* padding: 10px; */
+}
+
+.team-member-detail-card {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+    background-color: #191919;
+    border: 1px solid #a30000;
+    border-radius: 5px;
+
+}
+
+.team-member-detail-card>.field-container>input {
+    background-color: #191919 !important;
+}
+
+.submit-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.submit-button-container>button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #a30000;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 5px;
+}

@@ -1,0 +1,32 @@
+iframe {
+    height: 85vh;
+    width: 100vw;
+    position: absolute;
+    transform: translateY(110px);
+}
+
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000 !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.loading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

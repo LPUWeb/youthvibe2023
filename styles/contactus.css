@@ -1,0 +1,211 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    scroll-behavior: smooth;
+    box-sizing: content-box !important;
+}
+
+body {
+    background-image: radial-gradient(circle, #051937, #171228, #190a1a, #12040d, #000000);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+
+.container {
+    width: 100vw;
+    /* background-color: #000000; */
+    transform: translateY(100px);
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: radial-gradient(circle, #051937, #171228, #190a1a, #12040d, #000000);
+    align-items: center;
+    justify-content: center;
+}
+
+.container>.title {
+    font-size: 0.8rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    /* max-width: 90vw; */
+}
+
+
+.container>.category-container {
+    margin: auto;
+    border-radius: 12px;
+    /* border: 1px solid rgb(255, 0, 0); */
+    box-sizing: border-box;
+    padding: 30px;
+    max-width: 90vw;
+}
+
+
+.team-container {
+    margin: auto;
+    border-radius: 12px;
+    /* border: 1px solid rgba(255, 255, 255, 0.125); */
+    box-sizing: border-box;
+    padding: 30px;
+    max-width: 90vw;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    -webkit-justify-content: center;
+}
+
+
+
+
+
+
+.member-card {
+    display: inline-block;
+    justify-content: center;
+    -webkit-justify-content: center;
+    cursor: pointer;
+    margin: 32px;
+    max-width: 250px;
+}
+
+/* .card--1 .card__img,
+.card--1 .card__img--hover {
+    background-image: url('https://blog-c7ff.kxcdn.com/blog/wp-content/uploads/2019/09/Capture_HAckathon_wordpress.jpg');
+} */
+
+
+.card__like {
+    width: 18px;
+}
+
+.card__clock {
+    width: 15px;
+    vertical-align: middle;
+    fill: #ad5252;
+}
+
+.card__time {
+    font-size: 12px;
+    color: #ad5252;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.card__clock-info {
+    float: right;
+}
+
+.card__img {
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+}
+
+.card__info-hover {
+    position: absolute;
+    padding: 16px;
+    width: 95%;
+    opacity: 0;
+    top: 0;
+}
+
+.card__img--hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    top: 0;
+
+}
+
+.card {
+    margin-right: 25px;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    background-color: #000000;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05, 1.05);
+}
+
+.card__info {
+    z-index: 2;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 8, 8, 0.018);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 24px 24px 24px;
+    min-height: 150px;
+}
+
+.card__category {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #868686;
+}
+
+.card__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.card__by {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.card__author {
+    font-weight: 600;
+    text-decoration: none;
+    color: #c20000;
+}
+
+.card__author>img {
+    /* border-radius: 2px; */
+    width: 50px;
+}
+
+.site-icon {
+    margin-top: 10px;
+    width: 30px !important;
+}
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.5;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}

@@ -1,0 +1,41 @@
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000 !important;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    width: 100vw;
+    /* background-color: #000000; */
+    transform: translateY(80px);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/registartion\ starting\ soon.gif');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        background-image: url('../assets/Registration_starting_soon_mobile_aspect_ratio.gif') !important;
+    }
+}
