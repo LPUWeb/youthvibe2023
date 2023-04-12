@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/register.css">
     <link rel="stylesheet" href="./styles/marquee.css">
+
 </head>
 
 <body>
@@ -76,10 +77,7 @@
                         <input type="tel" placeholder="Phone Number">
                     </div>
 
-                    <div class="field-container">
-                        <span class="label">College / University:</span>
-                        <input type="text" placeholder="College">
-                    </div>
+
 
                     <div class="field-container">
                         <span class="label">Address:</span>
@@ -90,7 +88,7 @@
                         <span class="label">City:</span>
                         <input type="text" placeholder="City">
                     </div>
-                    <div class="field-container">
+                    <div style="width: 80%;" class="field-container">
                         <span class="label">State:</span>
                         <select name="state">
                             <option value="">Select a State</option>
@@ -132,8 +130,32 @@
                         </select>
 
                     </div>
+                    <br>
+
+                    <div class="field-container" style="width: 80%;">
+                        <div class="label">Are You A Student Of LPU?</div>
+                        <div class="radio-container">
+                            <div class="radio-option">
+                                <input type="radio" class="is_lpu" checked name="is_lpu" value="true" id="yes">
+                                <label for="yes">Yes</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" class="is_lpu" name="is_lpu" value="false" id="no">
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-container" id="lpu_reg_no" style="width: 75%;">
+                        <span class="label">LPU Registeration No:</span>
+                        <input type="number" placeholder="Registeration Number">
+                    </div>
+                    <div class="field-container" style="display: none; width: 75%;" id="other_college_indvidual">
+                        <span class="label">College / University:</span>
+                        <input type="text" placeholder="College">
+                    </div>
+
                 </div>
-                <hr>
+                <br><br>
                 <div class="section-info">
                     <h4>Select Events You Wish To Participate In:</h4>
                 </div>
@@ -229,10 +251,6 @@
                         <input type="tel" placeholder="Phone Number">
                     </div>
 
-                    <div class="field-container">
-                        <span class="label">Team's College / University:</span>
-                        <input type="text" placeholder="College">
-                    </div>
 
                     <div class="field-container">
                         <span class="label">Team Leader's Address:</span>
@@ -304,7 +322,35 @@
                             <option value="16">16</option>
                         </select>
                     </div>
+
+
+                    <div class="field-container" style="width: 80%;">
+                        <div class="label">Student Of LPU?</div>
+                        <div class="radio-container">
+                            <div class="radio-option">
+                                <input type="radio" class="is_lpu_team" checked name="is_lpu_team" value="true"
+                                    id="yes">
+                                <label for="yes">Yes</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" class="is_lpu_team" name="is_lpu_team" value="false" id="no">
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-container" id="lpu_reg_no_team" style="width: 75%;">
+                        <span class="label">LPU Registeration No:</span>
+                        <input type="number" placeholder="Registeration Number">
+                    </div>
+                    <div class="field-container" style="display: none; width: 75%;" id="other_college_team">
+                        <span class="label">College / University:</span>
+                        <input type="text" placeholder="College">
+                    </div>
+
                 </div>
+
+
+
 
                 <div class="team-members-container" id="member_container">
 

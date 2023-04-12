@@ -1,3 +1,5 @@
+let is_lpu_team = true;
+
 
 const toggle_indvidual_team_form = () => {
     const team_form = document.getElementById('team_form');
@@ -21,7 +23,7 @@ const toggle_indvidual_team_form = () => {
     });
 }
 
-const render_members_card = () => {
+const render_members_card = (is_lpu_team) => {
     const ts_selector = document.getElementById('team_size_selector');
     const team_size = ts_selector.value;
     const team_members = document.getElementById('member_container');
@@ -45,8 +47,62 @@ const render_members_card = () => {
                         <span class="label">Member ${i+1}'s Phone Number:</span>
                         <input type="tel" placeholder="Phone Number">
                     </div>
+                    ${
+                        is_lpu_team ?
+                            `
+                            <div class="field-container team_members_lpu_id" style="width: 75%;">
+                                <span class="label">LPU Registeration No:</span>
+                                <input type="number" placeholder="Registeration Number">
+                            </div>
+                            `:``
+                    }
+
                 </div>
         `;
+    }
+}
+
+/**
+ * <div class="field-container" class="team_members_lpu_id"  style="width: 75%;">
+                        <span class="label">LPU Registeration No:</span>
+                        <input type="number" placeholder="Registeration Number">
+                    </div>
+ */
+const render_college_field_if_not_lpu_individual = () => {
+    // console.log('render_college_field_if_not_lpu');
+    const is_lpu = document.querySelector('input[name="is_lpu"]:checked').value;
+    if (is_lpu === 'true') {
+        document.getElementById('other_college_indvidual').style.display = 'none';
+        document.getElementById('lpu_reg_no').style.display = 'flex';
+    }
+    else {
+        document.getElementById('other_college_indvidual').style.display = 'flex';
+        document.getElementById('lpu_reg_no').style.display = 'none';
+
+    }
+}
+const render_college_field_if_not_lpu_team = () => {
+    // console.log('render_college_field_if_not_lpu');
+    const is_lpu = document.querySelector('input[name="is_lpu_team"]:checked').value;
+    if (is_lpu === 'true') {
+        is_lpu_team = true;
+        document.getElementById('other_college_team').style.display = 'none';
+        document.getElementById('lpu_reg_no_team').style.display = 'flex';
+        document.querySelectorAll('.team_members_lpu_id').forEach((el) => {
+            console.log(el);
+            el.style.display = 'flex';
+        }
+        );
+    }
+    else {
+        is_lpu_team = false;
+        document.getElementById('other_college_team').style.display = 'flex';
+        document.getElementById('lpu_reg_no_team').style.display = 'none';
+        document.querySelectorAll('.team_members_lpu_id').forEach((el) => {
+            console.log(el);
+            el.style.display = 'none';
+        }
+        );
     }
 }
 
@@ -60,9 +116,21 @@ window.onload = function () {
     });
 
     toggle_indvidual_team_form();
-    render_members_card();
+
+    document.querySelectorAll('.is_lpu').forEach((el) => {
+        el.addEventListener('change', render_college_field_if_not_lpu_individual);
+    });
+    document.querySelectorAll('.is_lpu_team').forEach((el) => {
+        el.addEventListener('change', render_college_field_if_not_lpu_team);
+    });
+    
+    render_members_card(is_lpu_team);
+
 
     const team_size_selector = document.getElementById('team_size_selector');
     team_size_selector.addEventListener('change',  render_members_card);
+
+    // console.log(document.querySelectorAll('.is_lpu'));
+   
 
 }
