@@ -59,10 +59,81 @@
 
 
         </nav>
-        <div id="wrapper"></div>
+        <div id="wrapper">
+            <div class="container">
+
+                <div class="title" style="background-image: url('${events_data['Backdrop']}');">
+                    <div class="backdrop">
+                        <h1 id="name">IMUN</h1>
+                        <span class="event-tags"><span id="category">${category}</span> | <span
+                                id="date">${events_data['Date']}</span>
+                            | <span id="time">${events_data['Time']}</span></span>
+                    </div>
+                </div>
+                <div class="metadata">
+
+                    <div class="left">
+                        <div class="poster-container">
+                            <img src="${events_data[" Image URL"]}" id="poster" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            ${venue}
+                            ${total_prize}
+                            ${team_size}
+                            ${time_limit}
+                            ${registration_fee}
+                            ${rules}
+                            ${judging_criterion}
+                            ${general_guidelines}
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
 </body>
 <script src="./script/nav.js" defer></script>
 <script src="./script/marquee.js" defer></script>
 <script src="./script/event.js" defer></script>
 
 </html>
+<!--
+    <div class="container">
+
+    <div class="title" style="background-image: url('${events_data['Backdrop']}');">
+        <div class="backdrop">
+            <h1 id="name">${events_data['Name']}</h1>
+            <span class="event-tags"><span id="category">${category}</span> | <span
+                    id="date">${events_data['Date']}</span>
+                | <span id="time">${events_data['Time']}</span></span>
+        </div>
+    </div>
+    <div class="metadata">
+
+        <div class="left">
+            <div class="poster-container">
+                <img src="${events_data[" Image URL"]}" id="poster" alt="" srcset="">
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                ${venue}
+                ${total_prize}
+                ${team_size}
+                ${time_limit}
+                ${registration_fee}
+                ${rules}
+                ${judging_criterion}
+                ${general_guidelines}
+            </ul>
+        </div>
+
+
+    </div>
+
+</div>
+-->
