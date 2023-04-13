@@ -47,6 +47,27 @@ const render_members_card = (is_lpu_team) => {
                         <span class="label">Member ${i+1}'s Phone Number:</span>
                         <input type="tel" placeholder="Phone Number">
                     </div>
+
+                    <div class="field-container" style="width: 80%;">
+                        <div class="label">Member ${i+1}'s Gender:</div>
+                        <div class="radio-container">
+                            <div class="radio-option">
+                                <input type="radio" class="igender-radio" checked name="Member_${i+1}_Gender" value="Male"
+                                    id="Member_${i+1}_Male">
+                                <label for="Member_${i+1}_Male">Male</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" class="gender-radio" name="Member_${i+1}_Gender" value="Female"
+                                    id="Member_${i+1}_Female">
+                                <label for="Member_${i+1}_Female">Female</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" class="gender-radio" name="Member_${i+1}_Gender" value="Other"
+                                    id="Member_${i+1}_Other">
+                                <label for="Member_${i+1}_Other">Other</label>
+                            </div>
+                        </div>
+                </div>
                     ${
                         is_lpu_team ?
                             `

@@ -148,7 +148,7 @@ input[type=number] {
     align-items: center;
     flex-direction: row;
     /* margin: 20px; */
-    padding: 20px;
+    padding: 25px;
 }
 
 @media screen and (max-width: 800px) {
@@ -315,4 +315,23 @@ input[type=number] {
     font-size: 1.2rem;
     font-weight: 800;
     border-radius: 5px;
+}
+
+.radio-container {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.radio-container>.radio-option {
+    margin: 0 10px;
+}
+
+.radio-option>label {
+    margin: 0 5px;
+    cursor: pointer;
 }
