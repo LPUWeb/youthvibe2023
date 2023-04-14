@@ -31,8 +31,11 @@
     <!-- Default Theme -->
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
 
-    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
-        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <script src="./owl-carousel/owl.carousel.js"></script>
 
 
@@ -182,6 +185,15 @@
                         <span class="label">College / University:</span>
                         <input type="text" placeholder="College">
                     </div>
+                    <div class="field-container" style="width: 65%; display: none;"
+                        id="accomodation_select_container_ind">
+                        <span class="label">Require Accomodation</span>
+                        <select name="accomodation" id="accomodation_select_ind">
+                            <option value="yes">Yes</option>
+
+                            <option value="no">No</option>
+                        </select>
+                    </div>
 
                 </div>
                 <br><br>
@@ -253,14 +265,44 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    *Registration Fees for each event is Rs 500.
+                <div class="accomodation-container-ind" style="display: none;" id="accomodation_container_ind">
+                    <div class="accomodation-title">
+                        <h3>Accomodation Details</h3>
+                    </div>
+                    <div class="accomodation-field-container">
+                        <span class="label">Check-In Check-Out Date:</span>
+                        <input id="check_in_check_out_ind_range" style="color: black; width: 200px;">
+                    </div>
+
+                    <div class="accomodation-note">
+                        <span>Note - Cost 800RS/Day, Breakfast is Complimentary</span>
+                    </div>
+                    <div class="accomodation-price">
+                        <div class="total-price-ind" style="color: #fff;">Total Accomodation Fee - Rs <span
+                                id="total_accomodation_price_ind" style="font-weight: 800;">
+                                0 </span></div>
+                    </div>
+                </div>
+
+                <div class="total-cost">
+                    <h3>Total Fee - Rs <span id="total_cost_ind">0</span></h3>
+                </div>
+
+                <div class="agreement">
+                    <input type="checkbox" name="agreement" id="agreement">
+                    <label for="agreement">I agree to the <a href="#" target="_blank">Terms and
+                            Conditions</a></label>
                 </div>
                 <div class="submit-button-container">
                     <button type="submit" id="individual_submit_button" class="submit-button">Submit</button>
                 </div>
             </div>
-            <div class="team-form" id="team_form">
+
+
+
+
+
+            <div class="team-form" id="team_form" style="display: none;">
                 <div class="section-info">
                     <h4>Enter Team Leader's and Member's Details:</h4>
                 </div>
@@ -399,6 +441,15 @@
                         <span class="label">College / University:</span>
                         <input type="text" placeholder="College">
                     </div>
+                    <div class="field-container" style="width: 65%; display: none;"
+                        id="accomodation_select_container_team">
+                        <span class="label">Require Accomodation</span>
+                        <select name="accomodation" id="accomodation_select_team">
+                            <option value="yes">Yes</option>
+
+                            <option value="no">No</option>
+                        </select>
+                    </div>
 
                 </div>
 
@@ -406,7 +457,6 @@
 
 
                 <div class="team-members-container" id="member_container">
-
                 </div>
                 <hr>
                 <div class="section-info">
@@ -441,7 +491,7 @@
                         <div class="event-category-name">LifeStyle </div>
                         <div class="event-options">
                             <div class="event-option">
-                                <input type="checkbox" name="Designer_Spotlight" id="Designer_Spotlight">
+                                <input type="checkbox" disabled name="Designer_Spotlight" id="Designer_Spotlight">
                                 <label for="Designer_Spotlight">Designer Spotlight</label>
                             </div>
                             <div class="event-option">
@@ -498,10 +548,57 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div>
-                    *Registration Fees for each person in group is Rs 500
+
+                <div class="accomodation-container-team" style="display: flex; display: none;"
+                    id="accomodation_container_team">
+                    <div class="accomodation-title">
+                        <h3>Team Accomodation Details</h3>
+                    </div>
+
+
+                    <div class="accomodation-field-container">
+                        <span class="label">Number of Male Participants:</span>
+                        <input type="number" id="male_participant_number_accomodation" style="color: black;">
+                    </div>
+                    <div class="accomodation-field-container">
+                        <span class="label">Number of Female Participants:</span>
+                        <input type="number" id="female_participant_number_accomodation" style="color: black;">
+                    </div>
+                    <div class="accomodation-field-container">
+                        <span class="label">Number of Male Staff:</span>
+                        <input type="number" id="male_staff_number_accomodation" style="color: black;">
+                    </div>
+                    <div class="accomodation-field-container">
+                        <span class="label">Number of Female Staff:</span>
+                        <input type="number" id="female_staff_number_accomodation" style="color: black;">
+                    </div>
+                    <div class="accomodation-field-container">
+                        <span class="label">Check-In Check-Out Date:</span>
+                        <input id="check_in_check_out_team_range" style="color: black; width: 200px;">
+                    </div>
+
+
+
+                    <div class="accomodation-note">
+                        <span>Note - Fee 800RS/Day/Participant and 1000/Day/Staff,<br> Breakfast is
+                            Complimentary</span>
+                    </div>
+
+                    <div class="accomodation-price">
+                        <div class="total-price-team" style="color: #fff;">Total Accomodation Fee - Rs <span
+                                id="total_accomodation_price_team" style="font-weight: 800;">
+                                0 </span></div>
+                    </div>
+                </div>
+                <div class="total-cost">
+                    <h3>Total Fee - Rs <span id="total_cost_team">0</span></h3>
+                </div>
+
+                <div class="agreement">
+                    <input type="checkbox" name="agreement" id="agreement">
+                    <label for="agreement">I agree to the <a href="#" target="_blank">Terms and
+                            Conditions</a></label>
                 </div>
                 <div class="submit-button-container">
                     <button type="submit" id="team_submit_button" class="submit-button">Submit</button>
