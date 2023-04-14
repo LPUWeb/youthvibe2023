@@ -152,8 +152,8 @@ const render_accomodation_ind_container = () => {
 }
 
 const calculate_total_cost_individual = () => {
-    const event_cost_for_lpu = 500;
-    const event_cost_for_non_lpu = 800;
+    const event_cost_for_lpu = 300;
+    const event_cost_for_non_lpu = 500;
 
     let event_cost = 0;
 
@@ -199,8 +199,8 @@ const render_accomodation_team_container = () => {
     }
 }
 const calculate_team_accomodation_cost = (start,end) => {
-    const participant_rate = 800;
-    const staff_rate = 1000;
+    const participant_rate = 900;
+    const staff_rate = 1500;
     const days = Math.round((end - start) / (1000 * 60 * 60 * 24));
     
     let total_male_participants = parseInt(document.getElementById('male_participant_number_accomodation').value) || 0;
@@ -219,15 +219,15 @@ const calculate_team_accomodation_cost = (start,end) => {
     total_staff = total_staff || 0;
 
 
-    const total_cost = (total_participants*days*participant_rate) + (total_staff*days*staff_rate);
+    const total_cost = (total_participants*participant_rate) + (total_staff*staff_rate);
 
     return total_cost;
 
 }
 
 const calculate_total_cost_team = () => {
-    const event_cost_for_lpu = 500;
-    const event_cost_for_non_lpu = 800;
+    const event_cost_for_lpu = 300;
+    const event_cost_for_non_lpu = 500;
 
     let event_cost = 0;
 
@@ -316,7 +316,7 @@ window.onload = function () {
     }, function (start, end, label) {
         //calculate days
         const days = Math.round((end - start) / (1000 * 60 * 60 * 24));
-        document.getElementById('total_accomodation_price_ind').innerHTML = days*800;
+        document.getElementById('total_accomodation_price_ind').innerHTML = 900;
 
     }
     );
