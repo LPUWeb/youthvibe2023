@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
 
 :root {
     --purple: rgb(123, 31, 162);
@@ -987,7 +989,8 @@ html {
 .about-us-description>.home_container>.description-text-container>p {
     /* font-size: 1.4rem; */
     text-align: justify;
-    font-family: cursive !important;
+    font-weight: 500;
+    font-family: 'Roboto Slab', sans-serif !important;
 }
 
 .about-us-description>.home_container>.slide-show {
