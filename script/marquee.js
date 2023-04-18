@@ -1,5 +1,11 @@
   $(document).ready(function () {
 
+    document.getElementById("marquee").innerHTML = `
+            <div>YOUTHVIBE 2023 is here!</div>
+            <div>LPU's Global Open Fest            </div>
+            <div><a style="text-decoration: none;" href="/soon.html">Register Now</a></div>
+    `;
+
   $(".owl-carousel").owlCarousel({  //Basic Speeds
     slideSpeed: 200,
     paginationSpeed: 800,

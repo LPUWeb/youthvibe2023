@@ -42,7 +42,7 @@
 
 
     <link rel="stylesheet" href="./styles/nav.css">
-    <link rel="stylesheet" href="./styles/event.css">
+    <link rel="stylesheet" href="./styles/imun.css">
     <link rel="stylesheet" href="./styles/marquee.css">
 
 </head>
@@ -50,10 +50,8 @@
 <body>
     <div class="site-wrapper">
 
-        <div class="marquee owl-carousel owl-theme">
-            <div>YOUTHVIBE 2023 Coming Soon!</div>
-            <div>LPU's Largest Open Fest</div>
-            <div><a style="text-decoration: none;" href="/soon.html">Register Now</a></div>
+        <div id="marquee" class="marquee owl-carousel owl-theme">
+
         </div>
         <nav id="navigation">
 
@@ -61,33 +59,110 @@
         </nav>
         <div id="wrapper">
             <div class="container">
+                <div class="header-image">
+                    <img src="./assets/imu_header.png" alt="">
+                </div>
 
-                <div class="title" style="background-image: url('${events_data['Backdrop']}');">
+                <div class="title">
                     <div class="backdrop">
-                        <h1 id="name">IMUN</h1>
-                        <span class="event-tags"><span id="category">${category}</span> | <span
-                                id="date">${events_data['Date']}</span>
-                            | <span id="time">${events_data['Time']}</span></span>
+                        <h1 id="name">IMUN - DIPLOMACY FORUM INDIA</h1>
+                        <span class="event-tags">
+                            <span id="category">Literary</span> |
+                            <span id="date">30th April - 2nd May</span>
+                        </span>
+                        <span class="description">
+                            International Model United Nations (IMUN) is an academic
+                            simulation of the United Nations where the participants play the
+                            role as delegates from different countries and attempt to solve
+                            real global issues with the policies and perspectives of their
+                            assigned country.
+                        </span>
                     </div>
                 </div>
                 <div class="metadata">
 
                     <div class="left">
                         <div class="poster-container">
-                            <img src="${events_data[" Image URL"]}" id="poster" alt="" srcset="">
+                            <img src="./assets/imun_poster.jpg" id="poster" alt="" srcset="">
+                        </div>
+                        <div class="button-container">
+                            <button style="background-color: red;">
+                                <a href="https://www.internationalmun.org/" target=" _blank">Visit Site</a>
+                            </button>
+                            <button>
+                                <a href="./assets/IMUN_Brochure.pdf" target="_blank">Download Brochure</a>
+                            </button>
                         </div>
                     </div>
                     <div class="right">
+                        <p class="metadata-cat-title">Objectives</p>
                         <ul>
-                            ${venue}
-                            ${total_prize}
-                            ${team_size}
-                            ${time_limit}
-                            ${registration_fee}
-                            ${rules}
-                            ${judging_criterion}
-                            ${general_guidelines}
+                            <li>To develop deeper knowledge on current global issues and
+                                improve critical thinking.</li>
+                            <li>To strengthen participants' diplomacy skills and develop
+                                ideas to solve current global problems.</li>
+                            <li>
+                                To improve researching, public speaking, debating and
+                                writing skills in addition to critical thinking, teamwork and
+                                leadership abilities.
+                            </li>
+
+                            <li>
+                                To differentiate between the parliament and the UN, while
+                                distinguishing power struggle from diplomacy.
+                            </li>
+
+                            <li>
+                                To improve international exposure by gaining experiences
+                                from delegates across the world.
+                            </li>
                         </ul>
+                        <hr>
+                        <p class="metadata-cat-title">Timeline</p>
+                        <ol>
+                            <li>
+                                30TH APRIL - WE REQUEST THE
+                                DELEGATES TO
+                                REPORT TO THE
+                                COLLEGE CAMPUS
+                            </li>
+                            <li>
+                                1ST MAY (DAY 1)
+                                <ol>
+                                    <li>9:00 AM - 10:00 AM - REGISTRATIONS</li>
+                                    <li>10:00 AM - 11:00 AM - OPENING
+                                        CEREMONY</li>
+                                    <li>11:00 AM - 12:00PM - MUN 101
+                                        TRAINING</li>
+                                    <li>12:00 PM - 01:00 PM - LUNCH BREAK</li>
+                                    <li>01:00 PM - 02:30 PM - COMMITTEE
+                                        SESSION 1</li>
+
+                                    <li>
+                                        02:30 PM - 03:00 PM - SNACK BREAK
+                                    </li>
+
+                                    <li>
+                                        03:00 PM - 04:30 PM - COMMITTEE
+                                        SESSION 2
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                02 MAY (DAY 2)
+                                <ol>
+                                    <li>10 AM - 12 PM: COMMITTEE
+                                        SESSION 3</li>
+                                    <li>12 PM - 1 PM: LUNCH BREAK</li>
+                                    <li>1 PM - 2 PM: COMMITTEE SESSION
+                                        4 &FEEDBACKS</li>
+                                    <li>2 PM - 2:30 PM: SNACKS BREAK</li>
+                                    <li>2:30 PM - 4:30 PM: CLOSING &
+                                        AWARDING
+                                        SESSIONS</li>
+                                </ol>
+                            </li>
+                        </ol>
                     </div>
 
 
@@ -101,39 +176,3 @@
 <script src="./script/event.js" defer></script>
 
 </html>
-<!--
-    <div class="container">
-
-    <div class="title" style="background-image: url('${events_data['Backdrop']}');">
-        <div class="backdrop">
-            <h1 id="name">${events_data['Name']}</h1>
-            <span class="event-tags"><span id="category">${category}</span> | <span
-                    id="date">${events_data['Date']}</span>
-                | <span id="time">${events_data['Time']}</span></span>
-        </div>
-    </div>
-    <div class="metadata">
-
-        <div class="left">
-            <div class="poster-container">
-                <img src="${events_data[" Image URL"]}" id="poster" alt="" srcset="">
-            </div>
-        </div>
-        <div class="right">
-            <ul>
-                ${venue}
-                ${total_prize}
-                ${team_size}
-                ${time_limit}
-                ${registration_fee}
-                ${rules}
-                ${judging_criterion}
-                ${general_guidelines}
-            </ul>
-        </div>
-
-
-    </div>
-
-</div>
--->

@@ -10,6 +10,8 @@ const nav_html = `
     <li><a href="schedule.html">SCHEDULE</a></li>
 
     <li><a href="events.html">EVENTS</a></li>
+    <li><a href="imun.html">IMUN</a></li>
+
     <li><a href="faqs.html">FAQs</a></li>
     <li><a href="sponsors.html">SPONSORS</a></li>
     <li><a href="contactus.html">CONTACT US</a></li>
@@ -29,6 +31,8 @@ const nav_html = `
         <li><a href="schedule.html">SCHEDULE</a></li>
 
         <li><a href="events.html">EVENTS</a></li>
+        <li><a href="imun.html">IMUN</a></li>
+
         <li><a href="faqs.html">FAQs</a></li>
         <li><a href="sponsors.html">SPONSORS</a></li>
         <li><a href="contactus.html">CONTACT US</a></li>
