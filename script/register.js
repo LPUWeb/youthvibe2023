@@ -33,19 +33,19 @@ const render_members_card = (is_lpu_team) => {
         <div class="team-member-detail-card" id="memeber_${i+1}">
                     <div class="field-container">
                         <span class="label">Member ${i+1}'s First Name:</span>
-                        <input type="text" placeholder="First Name">
+                        <input type="text" id="fname_${i+1}" placeholder="First Name">
                     </div>
                     <div class="field-container">
                         <span class="label">Member ${i+1}'s Last Name:</span>
-                        <input type="text" placeholder="Last Name">
+                        <input type="text" id="lname_${i+1}" placeholder="Last Name">
                     </div>
                     <div class="field-container">
                         <span class="label">Member ${i+1}'s Email:</span>
-                        <input type="email" placeholder="Email">
+                        <input type="email" id="emailId_${i+1}" placeholder="Email">
                     </div>
                     <div class="field-container">
                         <span class="label">Member ${i+1}'s Phone Number:</span>
-                        <input type="tel" placeholder="Phone Number">
+                        <input type="tel" id="phno_${i+1}" placeholder="Phone Number">
                     </div>
 
                     <div class="field-container" style="width: 80%;">
@@ -73,7 +73,7 @@ const render_members_card = (is_lpu_team) => {
                             `
                             <div class="field-container team_members_lpu_id" style="width: 75%;">
                                 <span class="label">LPU Registeration No:</span>
-                                <input type="number" placeholder="Registeration Number">
+                                <input type="number" id="Regno_${i+1}" placeholder="Registeration Number">
                             </div>
                             `:``
                     }
@@ -158,23 +158,23 @@ const calculate_total_cost_individual = () => {
     let event_cost = 0;
 
     const is_lpu = document.querySelector('input[name="is_lpu"]:checked').value;
-
+   
     if (is_lpu === 'true') {
         event_cost = event_cost_for_lpu;
     }
     else {
         event_cost = event_cost_for_non_lpu;
     }
-
-    
-    const events = $('.event-option>input[type="checkbox"]').slice(0,9);
+    const events = $('.event-option>label>input[type="checkbox"]').slice(0,9);
+   
     let no_of_checked_events = 0;
     events.each((i, el) => {
+       
         if (el.checked) {
+            
             no_of_checked_events++;
         }
     });
-
     const is_accomodation_slected = document.getElementById('accomodation_select_ind').value;
     let accomodation_cost = 0;
     if (is_accomodation_slected === 'yes' && is_lpu === 'false') {
@@ -344,13 +344,14 @@ window.onload = function () {
 
 
     document.getElementById('individual_form').addEventListener('change', function (e) {
+        
         const total_cost = calculate_total_cost_individual();
-        document.getElementById('total_cost_ind').innerHTML = total_cost;
+        document.getElementById('total_cost_ind').value = total_cost;
     });
 
     document.getElementById('team_form').addEventListener('change', function (e) {
         const total_cost = calculate_total_cost_team();
-        document.getElementById('total_cost_team').innerHTML = total_cost;
+        document.getElementById('total_cost_team').value = total_cost;
     });
     
 

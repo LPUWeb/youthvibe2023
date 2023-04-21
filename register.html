@@ -6,7 +6,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-90T52VK88Q"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'G-90T52VK88Q');
@@ -33,12 +36,24 @@
 
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <script src="./owl-carousel/owl.carousel.js"></script>
 
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script> -->
 
+    <style>
+        .amoutbox {
+            background: transparent;
+            color: #FFF;
+            border: 0;
+            font-weight: bold;
+            font-size: 1.17em;
+            width: 75px;
+        }
+    </style>
 
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/register.css">
@@ -47,6 +62,7 @@
 </head>
 
 <body>
+
     <div class="marquee owl-carousel owl-theme">
         <div>YOUTHVIBE 2023 Coming Soon!</div>
         <div>LPU's Largest Open Fest</div>
@@ -61,11 +77,12 @@
         <div class="title">
             <h1>Register Now!</h1>
         </div>
-        <div class="form-container">
+        <div class="form-container" style="margin: 0 0 50px 0;">
             <div class="tab-button-container">
                 <button id="individual_button" style="background-color: #ff0000;">Individual</button>
-                <button id="team_button">Team</button>
+                <button type="button" id="team_button">Team</button>
             </div>
+
             <div class="individual-form" id="individual_form">
                 <div class="section-info">
                     <h4>Enter Participant Details:</h4>
@@ -73,27 +90,27 @@
                 <div class="individual-details-container">
                     <div class="field-container">
                         <span class="label">First Name:</span>
-                        <input type="text" placeholder="First Name">
+                        <input id="firstname" type="text" placeholder="First Name">
                     </div>
                     <div class="field-container">
                         <span class="label">Last Name:</span>
-                        <input type="text" placeholder="Last Name">
+                        <input id="lastname" type="text" placeholder="Last Name">
                     </div>
 
                     <div class="field-container">
                         <span class="label">Email:</span>
-                        <input type="email" placeholder="Email">
+                        <input id="email" type="email" placeholder="Email">
                     </div>
                     <div class="field-container">
                         <span class="label">Phone Number:</span>
-                        <input type="tel" placeholder="Phone Number">
+                        <input id="phone" type="tel" placeholder="Phone Number">
                     </div>
 
                     <div class="field-container" style="width: 80%;">
                         <div class="label">Gender:</div>
                         <div class="radio-container">
                             <div class="radio-option">
-                                <input type="radio" class="igender-radio" checked name="Gender" value="Male" id="Male">
+                                <input type="radio" class="gender-radio" checked name="Gender" value="Male" id="Male">
                                 <label for="Male">Male</label>
                             </div>
                             <div class="radio-option">
@@ -112,16 +129,16 @@
 
                     <div class="field-container">
                         <span class="label">City:</span>
-                        <input type="text" placeholder="City">
+                        <input id="city" type="text" placeholder="City">
                     </div>
                     <div class="field-container">
                         <span class="label">Address:</span>
-                        <textarea name="address" id="" cols="10" rows="30"></textarea>
+                        <textarea name="address" id="address" cols="10" rows="30"></textarea>
 
                     </div>
                     <div style="width: 80%;" class="field-container">
                         <span class="label">State:</span>
-                        <select name="state">
+                        <select id="state">
                             <option value="">Select a State</option>
                             <option value="AN">Andaman and Nicobar Islands</option>
                             <option value="AP">Andhra Pradesh</option>
@@ -179,18 +196,17 @@
                     </div>
                     <div class="field-container" id="lpu_reg_no" style="width: 75%;">
                         <span class="label">LPU Registration No:</span>
-                        <input type="number" placeholder="Registration Number">
+                        <input id="regNo" type="number" placeholder="Registration Number">
                     </div>
                     <div class="field-container" style="display: none; width: 75%;" id="other_college_indvidual">
                         <span class="label">College / University:</span>
-                        <input type="text" placeholder="College">
+                        <input id="demo" type="text" placeholder="College">
                     </div>
-                    <div class="field-container" style="width: 65%; display: none;"
-                        id="accomodation_select_container_ind">
+                    <div class="field-container" style="width: 65%;" id="accomodation_select_container_ind">
                         <span class="label">Require Accomodation</span>
                         <select name="accomodation" id="accomodation_select_ind">
+                            <option value="Select">--Select--</option>
                             <option value="yes">Yes</option>
-
                             <option value="no">No</option>
                         </select>
                     </div>
@@ -205,8 +221,8 @@
                         <div class="event-category-name">DANCE </div>
                         <div class="event-options">
                             <div class="event-option">
-                                <input type="checkbox" name="Nritya_Natraj" id="Nritya_Natraj">
-                                <label for="Nritya_Natraj">Nritya Natraj</label>
+                                <label><input type="checkbox" name="Event" value="Nritya Natraj">
+                                Nritya Natraj</label>
                             </div>
                         </div>
                     </div>
@@ -214,17 +230,16 @@
                         <div class="event-category-name">MUSIC </div>
                         <div class="event-options">
                             <div class="event-option">
-                                <input type="checkbox" name="Voice_of_Youth_Vibe" id="Voice_of_Youth_Vibe">
-                                <label for="Voice_of_Youth_Vibe">Voice of
-                                    Youth Vibe</label>
+                                <label><input type="checkbox" name="Event" value="Voice of Youth Vibe">
+                                Voice of Youth Vibe</label>
                             </div>
                             <div class="event-option">
-                                <input type="checkbox" name="DJ_War" id="DJ_War">
-                                <label for="DJ_War">DJ War</label>
+                                <label><input type="checkbox" name="Event" value="DJ War">
+                                DJ War</label>
                             </div>
                             <div class="event-option">
-                                <input type="checkbox" name="RapstarRap" id="RapstarRap">
-                                <label for="RapstarRap">THE FUSION-Beat boxing/RapstarRap Singing</label>
+                                <label><input type="checkbox" name="Event" value="THE FUSION-Beat boxing/RapstarRap Singing">
+                                THE FUSION-Beat boxing/RapstarRap Singing</label>
                             </div>
                         </div>
                     </div>
@@ -232,8 +247,8 @@
                         <div class="event-category-name">LifeStyle </div>
                         <div class="event-options">
                             <div class="event-option">
-                                <input type="checkbox" name="mr_ms_yv" id="mr_ms_yv">
-                                <label for="mr_ms_yv">Mr. & Ms. Youth Vibe</label>
+                                <label><input type="checkbox" name="Event" value="Mr. & Ms. Youth Vibe">
+                               Mr. & Ms. Youth Vibe</label>
                             </div>
 
                         </div>
@@ -242,16 +257,16 @@
                         <div class="event-category-name">SPORTS </div>
                         <div class="event-options">
                             <div class="event-option">
-                                <input type="checkbox" name="badminton_female" id="badminton_female">
-                                <label for="badminton_female">Badminton (Female)</label>
+                                <label><input type="checkbox" name="Event" value="Badminton (Female)">
+                                Badminton (Female)</label>
                             </div>
                             <div class="event-option">
-                                <input type="checkbox" name="badminton_male" id="badminton_male">
-                                <label for="badminton_male">Badminton Mania (Male)</label>
+                                <label><input type="checkbox" name="Event" value="Badminton Mania (Male)">
+                                Badminton Mania (Male)</label>
                             </div>
                             <div class="event-option">
-                                <input type="checkbox" name="chess" id="chess">
-                                <label for="chess">Clash of titans (Chess)</label>
+                                <label><input type="checkbox" name="Event" value="Clash of titans (Chess)">
+                                Clash of titans (Chess)</label>
                             </div>
                         </div>
                     </div>
@@ -259,13 +274,12 @@
                         <div class="event-category-name">LITERARY </div>
                         <div class="event-options">
                             <div class="event-option">
-                                <input type="checkbox" name="imun" id="imun">
-                                <label for="imun">IMUN</label>
+                                <label><input type="checkbox" name="Event" value="IMUN">IMUN</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="accomodation-container-ind" style="display: none;" id="accomodation_container_ind">
+                <div class="accomodation-container-ind" style="display:none;" id="accomodation_container_ind">
                     <div class="accomodation-title">
                         <h3>Accomodation Details</h3>
                     </div>
@@ -278,28 +292,24 @@
                         <span>Note - Cost 900RS, Breakfast is Complimentary</span>
                     </div>
                     <div class="accomodation-price">
-                        <div class="total-price-ind" style="color: #fff;">Total Accomodation Fee - Rs <span
-                                id="total_accomodation_price_ind" style="font-weight: 800;">
+                        <div class="total-price-ind" style="color: #fff;">Total Accomodation Fee - Rs <span id="total_accomodation_price_ind" style="font-weight: 800;">
                                 0 </span></div>
                     </div>
                 </div>
 
-                <div class="total-cost">
-                    <h3>Total Fee - Rs <span id="total_cost_ind">0</span></h3>
-                </div>
+                <div class="total-cost">></div>
+                <h3>Total Fee - Rs <input class="amoutbox" value="0" id="total_cost_ind" readonly disabled /></h3>
 
                 <div class="agreement">
                     <input type="checkbox" name="agreement" id="agreement">
-                    <label for="agreement">I confirm that all the information provided by me is true and correct to my knowledge. I also understand that any willful dishonesty may lead to cancellation of my participation in the event.</label>
+                    <label for="agreement">I confirm that all the information provided by me is true and correct to my
+                        knowledge. I also understand that any willful dishonesty may lead to cancellation of my
+                        participation in the event.</label>
                 </div>
                 <div class="submit-button-container">
                     <button type="submit" id="individual_submit_button" class="submit-button">Submit</button>
                 </div>
             </div>
-
-
-
-
 
             <div class="team-form" id="team_form" style="display: none;">
                 <div class="section-info">
@@ -308,37 +318,34 @@
                 <div class="team-details-container">
                     <div class="field-container">
                         <span class="label">Team Leader's First Name:</span>
-                        <input type="text" placeholder="First Name">
+                        <input id="tfirstname" type="text" placeholder="First Name">
                     </div>
                     <div class="field-container">
                         <span class="label">Team Leader's Last Name:</span>
-                        <input type="text" placeholder="Last Name">
+                        <input id="tlastname" type="text" placeholder="Last Name">
                     </div>
 
                     <div class="field-container">
                         <span class="label">Team Leader's Email:</span>
-                        <input type="email" placeholder="Email">
+                        <input id="temail" type="email" placeholder="Email">
                     </div>
                     <div class="field-container">
                         <span class="label">Team Leader's Phone Number:</span>
-                        <input type="tel" placeholder="Phone Number">
+                        <input id="tphone" type="tel" placeholder="Phone Number">
                     </div>
                     <div class="field-container" style="width: 80%;">
                         <div class="label">Team Leader's Gender:</div>
                         <div class="radio-container">
                             <div class="radio-option">
-                                <input type="radio" class="igender-radio" checked name="Team_lead_Gender" value="Male"
-                                    id="Team_lead_Male">
+                                <input type="radio" class="tgender-radio" checked name="Team_lead_Gender" value="Male" id="Team_lead_Male">
                                 <label for="Team_lead_Male">Male</label>
                             </div>
                             <div class="radio-option">
-                                <input type="radio" class="gender-radio" name="Team_lead_Gender" value="Female"
-                                    id="Team_lead_Female">
+                                <input type="radio" class="tgender-radio" name="Team_lead_Gender" value="Female" id="Team_lead_Female">
                                 <label for="Team_lead_Female">Female</label>
                             </div>
                             <div class="radio-option">
-                                <input type="radio" class="gender-radio" name="Team_lead_Gender" value="Other"
-                                    id="Team_lead_Other">
+                                <input type="radio" class="tgender-radio" name="Team_lead_Gender" value="Other" id="Team_lead_Other">
                                 <label for="Team_lead_Other">Other</label>
                             </div>
 
@@ -348,15 +355,15 @@
 
                     <div class="field-container">
                         <span class="label">Team Leader's Address:</span>
-                        <textarea name="address" id="" cols="10" rows="30"></textarea>
+                        <textarea name="address" id="taddress" cols="10" rows="30"></textarea>
                     </div>
                     <div class="field-container">
                         <span class="label">Team's City:</span>
-                        <input type="text" placeholder="City">
+                        <input id="tcity" type="text" placeholder="City">
                     </div>
                     <div class="field-container">
                         <span class="label">Team's State:</span>
-                        <select name="state">
+                        <select id="tstate">
                             <option value="">Select a State</option>
                             <option value="AN">Andaman and Nicobar Islands</option>
                             <option value="AP">Andhra Pradesh</option>
@@ -422,8 +429,7 @@
                         <div class="label">Student Of LPU?</div>
                         <div class="radio-container">
                             <div class="radio-option">
-                                <input type="radio" class="is_lpu_team" checked name="is_lpu_team" value="true"
-                                    id="yes">
+                                <input type="radio" class="is_lpu_team" checked name="is_lpu_team" value="true" id="yes">
                                 <label for="yes">Yes</label>
                             </div>
                             <div class="radio-option">
@@ -434,18 +440,17 @@
                     </div>
                     <div class="field-container" id="lpu_reg_no_team" style="width: 75%;">
                         <span class="label">LPU Registeration No:</span>
-                        <input type="number" placeholder="Registeration Number">
+                        <input id="demo1" type="number" placeholder="Registeration Number">
                     </div>
                     <div class="field-container" style="display: none; width: 75%;" id="other_college_team">
                         <span class="label">College / University:</span>
-                        <input type="text" placeholder="College">
+                        <input id="demo1" type="text" placeholder="College">
                     </div>
-                    <div class="field-container" style="width: 65%; display: none;"
-                        id="accomodation_select_container_team">
+                    <div class="field-container" style="width: 65%;" id="accomodation_select_container_team">
                         <span class="label">Require Accomodation</span>
                         <select name="accomodation" id="accomodation_select_team">
+                            <option value="Select">--Select--</option>
                             <option value="yes">Yes</option>
-
                             <option value="no">No</option>
                         </select>
                     </div>
@@ -549,8 +554,7 @@
                     </div>
                 </div>
 
-                <div class="accomodation-container-team" style="display: flex; display: none;"
-                    id="accomodation_container_team">
+                <div class="accomodation-container-team" id="accomodation_container_team">
                     <div class="accomodation-title">
                         <h3>Team Accomodation Details</h3>
                     </div>
@@ -585,18 +589,19 @@
                     </div>
 
                     <div class="accomodation-price">
-                        <div class="total-price-team" style="color: #fff;">Total Accomodation Fee - Rs <span
-                                id="total_accomodation_price_team" style="font-weight: 800;">
+                        <div class="total-price-team" style="color: #fff;">Total Accomodation Fee - Rs <span id="total_accomodation_price_team" style="font-weight: 800;">
                                 0 </span></div>
                     </div>
                 </div>
                 <div class="total-cost">
-                    <h3>Total Fee - Rs <span id="total_cost_team">0</span></h3>
+                    <h3>Total Fee - Rs <input class="amoutbox" value="0" id="total_cost_team" readonly disabled /></h3>
                 </div>
 
                 <div class="agreement">
                     <input type="checkbox" name="agreement" id="agreement">
-                    <label for="agreement">I confirm that all the information provided by me is true and correct to my knowledge. I also understand that any willful dishonesty may lead to cancellation of my participation in the event.</label>
+                    <label for="agreement">I confirm that all the information provided by me is true and correct to my
+                        knowledge. I also understand that any willful dishonesty may lead to cancellation of my
+                        participation in the event.</label>
                 </div>
                 <div class="submit-button-container">
                     <button type="submit" id="team_submit_button" class="submit-button">Submit</button>
@@ -604,6 +609,11 @@
 
             </div>
         </div>
+
+
+
+
+
     </div>
 
 
@@ -613,5 +623,206 @@
 <script src="./script/nav.js" defer></script>
 <script src="./script/marquee.js"></script>
 <script src="./script/register.js" defer></script>
+
+<script>
+    // On Click Team Tab Generate Team Name
+    $("#team_button").on('click', function() {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:44319/api/YouthVibe/GenerateTeamName",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(data) {
+                alert(data);
+                // if (data.d == "Saved") {
+                //     // swal('Success', 'Submitted succesfully!', 'success');
+                //     // $("#btnSubmit").attr('disabled', 'disabled');
+                // } else {
+                //     // swal('', 'Already submitted!', 'info');
+                // }
+            },
+            error: function() {
+
+            }
+        });
+    });
+
+
+    $("#individual_submit_button").click(function() {
+        var Events = $("input[name='Event']:checked").map(function() {
+            return this.value;
+        }).get().join(', ');
+
+
+        var firstname = $("#firstname").val();
+        var lastname = $("#lastname").val();
+        var email = $("#email").val();
+        var phone = $("#phone").val();
+        var address = $("#address").val();
+        var city = $("#city").val();
+        var state = $("#state").val();
+        var RegNo = $("#regNo").val();
+        var Gender = $(".gender-radio:checked").val();
+        var Student = $(".is_lpu").val();
+        var Eventamount = $("#total_cost_ind").val();
+        var ReqAccm = $("#accomodation_select_ind :selected").val();
+        var CheckInOutdate = $("#check_in_check_out_ind_range").val();
+        var CollegeUniversity = $("#demo").val();
+        var TotalAccomodationFee = $('#total_accomodation_price_ind').text();
+        var IsConfirm = $('#agreement').is(":checked") == true ? '1' : '0';
+
+        var IndDataObj = {
+            FirstName: firstname,
+            LastName: lastname,
+            Email: email,
+            PhoneNo: phone,
+            Address: address,
+            City: city,
+            State: state,
+            Student: Student,
+            CollegeUniversity: CollegeUniversity,
+            Eevents: Events,
+            RoleID: 'I',
+            UniqueID: '',
+            TeamName: '',
+            EventAmount: Eventamount,
+            Gender: Gender,
+            RequireAccomodation: ReqAccm,
+            CheckInOutdate: CheckInOutdate,
+            TotalAccomodationFee: TotalAccomodationFee,
+            RegNum: RegNo,
+            IsConfirm: IsConfirm,
+
+        };
+        // console.log(IndDataObj);
+        // debugger;
+
+        if ($('#agreement').is(":checked") == true) {
+            // $.post("http://localhost:44319/api/YouthVibe/AddyouthVibe2023", IndDataObj, function (response) {
+            //     alert(response);
+            //     window.location.href = response;
+            // })
+
+            ResetIndForm();
+
+            $.ajax({
+                type: "POST",
+                //url: "http://localhost:44319/api/YouthVibe/AddyouthVibe2023",
+                url: "https://schools.lpu.in/Services/api/YouthVibe/AddyouthVibe2023/",
+                data: JSON.stringify(IndDataObj),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(data) {
+
+                    // if (data.d == "Success") {
+                    //    alert('Data Saved Successfully !');
+                    // } else {
+
+                    // }
+                    alert(data);
+                    ResetIndForm();
+                    location.reload();
+                },
+                error: function() {
+
+                }
+            });
+
+        } else {
+
+        }
+
+    })
+
+    function ResetIndForm() {
+        $("#firstname").val('');
+        $("#lastname").val('');
+        $("#email").val('');
+        $("#phone").val('');
+        $("#address").val('');
+        $("#city").val('');
+        $("#state").val('');
+        $("#regNo").val('');
+        $(".gender-radio:checked").val('');
+        $(".is_lpu").val('');
+        $("#total_cost_ind").val('');
+        $("#accomodation_select_ind :selected").val('');
+        $("#check_in_check_out_ind_range").val('');
+        $("#demo").val('');
+        $('#total_accomodation_price_ind').text('');
+        // $('#agreement').attr('checked', false);
+        //$('#agreement').prop('checked', value == 0);
+
+    }
+
+    $('#individual_form').each(function() {
+        //this.reset();
+    });
+
+    $("#team_submit_button").click(function() {
+
+        const team_size = document.getElementById('team_size_selector').value;
+        alert(team_size);
+        // debugger;
+        // var checkedValues = [];
+        // $('input[type="checkbox"]:checked').each(function () {
+        //     checkedValues.push($(this).closest('label').find('span').text());
+        // });
+        // console.log(checkedValues);
+
+
+        // var firstname = $("#tfirstname").val();
+        // var lastname = $("#tlastname").val();
+        // var email = $("#temail").val();
+        // var phone = $("#tphone").val();
+        // var address = $("#taddress").val();
+        // var city = $("#tcity").val();
+        // var state = $("#tstate").val();
+        // var demo = $("#demo1").val();
+        // var Gender = $(".tgender-radio:checked").val();
+        // var Student = $(".is_lpu_team").val();
+        // var amount = $("#total_cost_team").text();
+        // var Events = $("#lblNritya").text();
+        // var RequireAccomodation = $("#accomodation_select_team").val();
+        // var CheckIndate = $("#check_in_check_out_team_range").val();
+
+
+        // //Get Memmbers Details
+        // const team_size = document.getElementById('team_size_selector').value;
+        // var fname=$('#fname_2').val();
+        // var lname=$('#lname_2').val();
+        // var email=$('#phno_2').val();
+        // var gender=$('input:radio[name=Member_2_Gender]:checked').val();
+        // var regno=$('#Regno_2').val();
+
+        // var arrMem=[]
+
+        // $.post("http://localhost:44319/api/YouthVibe/AddyouthVibe2023", {
+        //     FirstName: firstname,
+        //     LastName: lastname,
+        //     Email: email,
+        //     PhoneNo: phone,
+        //     Address: address,
+        //     City: city,
+        //     State: state,
+        //     Student: Student,
+        //     CollegeUniversity: demo,
+        //     Eevents: Events,
+        //     RoleID: 'T',
+        //     UniqueID: '',
+        //     TeamName: '',
+        //     Amount: amount,
+        //     Gender: Gender,
+        //     RequireAccomodation: RequireAccomodation,
+        //     CheckIndate: '',
+        //     CheckOutDate: '',
+        //     TotalAccomodationFee: '',
+        //     CheckInCheckOutDate: CheckIndate
+        // }, function (response) {
+        //     window.location.href = response;
+        // })
+
+    })
+</script>
 
 </html>
