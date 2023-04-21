@@ -1,0 +1,116 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    scroll-behavior: smooth;
+    box-sizing: content-box !important;
+}
+
+body {
+    background-color: #000 !important;
+    margin: 0;
+    padding: 0;
+
+}
+
+/*Section used for centering process*/
+section {
+    width: 100%;
+    background-image: radial-gradient(circle, #051937, #171228, #190a1a, #12040d, #000000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(100px);
+}
+
+section>h1 {
+    margin: 30px;
+}
+
+.container {
+    /* width: 100%; */
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.accordion {
+    max-width: 800px;
+}
+
+.accordion .contentBx {
+    margin: 10px 0;
+    /* display: flex; */
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.accordion .contentBx .label {
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid rgb(69, 69, 69);
+    border-radius: 5px;
+
+    width: 700px;
+    max-width: 80vw;
+}
+
+.accordion .contentBx .label {
+    position: relative;
+    padding: 16px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    /* width: 50vw; */
+    user-select: none;
+    font-weight: 700;
+
+}
+
+.accordion .contentBx .label::before {
+    content: "↑";
+    color: #e83535;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 1em;
+    transform: translateY(-50%);
+    transition: .4s ease-in-out;
+}
+
+.accordion .contentBx.active .label::before {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion .contentBx .content {
+    /* width: 760px; */
+    position: relative;
+    color: white;
+    background: #9d9d9d23;
+    height: 0;
+    transition: all .3s ease-out;
+    /* overflow-y: auto; */
+    overflow: hidden;
+    width: 700px;
+    max-width: 80vw;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* padding: 10px; */
+
+}
+
+.accordion .contentBx .content p {
+    padding: 25px;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.accordion .contentBx.active .content {
+    height: 150px;
+
+    /* padding: 10px; */
+}

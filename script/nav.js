@@ -10,10 +10,12 @@ const nav_html = `
     <li><a href="schedule.html">SCHEDULE</a></li>
 
     <li><a href="events.html">EVENTS</a></li>
+    <li><a href="imun.html">IMUN</a></li>
+
     <li><a href="faqs.html">FAQs</a></li>
     <li><a href="sponsors.html">SPONSORS</a></li>
     <li><a href="contactus.html">CONTACT US</a></li>
-    <li><a href="register.html"><button class="call-to-action"> REGISTER</button></a></li>
+    <li><a href="soon.html"><button class="call-to-action"> REGISTER</button></a></li>
 </ul>
 <div class="burger" id="burger_menu_btn">
     <img src="assets/icons8-menu-rounded-100.png" alt="nav">
@@ -29,10 +31,12 @@ const nav_html = `
         <li><a href="schedule.html">SCHEDULE</a></li>
 
         <li><a href="events.html">EVENTS</a></li>
+        <li><a href="imun.html">IMUN</a></li>
+
         <li><a href="faqs.html">FAQs</a></li>
         <li><a href="sponsors.html">SPONSORS</a></li>
         <li><a href="contactus.html">CONTACT US</a></li>
-        <li><a href="register.html"><button class="call-to-action"> REGISTER</button></a></li>
+        <li><a href="soon.html"><button class="call-to-action"> REGISTER</button></a></li>
     </ul>
 </div>
 `

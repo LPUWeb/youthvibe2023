@@ -132,6 +132,38 @@
     background-repeat: no-repeat;
 }
 
+.event-carousel-item>.right>.description>.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.event-carousel-item>.right>.description>.button-container>button {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: 0.2s ease-in-out;
+}
+
+.event-carousel-item>.right>.description>.button-container>button:hover {
+    background: #ff0000;
+    border: 1px solid #000000;
+    color: #ffffff;
+}
+
+
+
+
+.event-carousel-item>.right>.description>.button-container>button>a {
+    text-decoration: none;
+}
+
+
 @media screen and (max-width: 768px) {
 
 
