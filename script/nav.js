@@ -36,7 +36,7 @@ const nav_html = `
         <li><a href="faqs.html">FAQs</a></li>
         <li><a href="sponsors.html">SPONSORS</a></li>
         <li><a href="contactus.html">CONTACT US</a></li>
-        <li><a href="soon.html"><button class="call-to-action"> REGISTER</button></a></li>
+        <li><a href="https://schools.lpu.in/youthvibe/register.html" target="_blank"><button class="call-to-action"> REGISTER</button></a></li>
     </ul>
 </div>
 `
