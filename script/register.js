@@ -7,12 +7,12 @@ const toggle_indvidual_team_form = () => {
     const team_form_btn = document.getElementById('team_button');
     const individual_form_btn = document.getElementById('individual_button');
 
-    team_form_btn.addEventListener('click', () => {
-        team_form.style.display = 'flex';
-        individual_form.style.display = 'none';
-        team_form_btn.style.backgroundColor = '#ff0000';
-        individual_form_btn.style.backgroundColor = '#000';
-    });
+    // team_form_btn.addEventListener('click', () => {
+    //     team_form.style.display = 'flex';
+    //     individual_form.style.display = 'none';
+    //     team_form_btn.style.backgroundColor = '#ff0000';
+    //     individual_form_btn.style.backgroundColor = '#000';
+    // });
 
 
     individual_form_btn.addEventListener('click', () => {
@@ -24,12 +24,12 @@ const toggle_indvidual_team_form = () => {
 }
 
 const render_members_card = (is_lpu_team) => {
-    const ts_selector = document.getElementById('team_size_selector');
-    const team_size = ts_selector.value;
-    const team_members = document.getElementById('member_container');
-    team_members.innerHTML = '';
-    for (let i = 1; i < team_size; i++) {
-        team_members.innerHTML += `
+        const ts_selector = document.getElementById('team_size_selector');
+        const team_size = ts_selector.value;
+        const team_members = document.getElementById('member_container');
+        team_members.innerHTML = '';
+        for (let i = 1; i < team_size; i++) {
+            team_members.innerHTML += `
         <div class="team-member-detail-card" id="memeber_${i+1}">
                     <div class="field-container">
                         <span class="label">Member ${i+1}'s First Name:</span>
