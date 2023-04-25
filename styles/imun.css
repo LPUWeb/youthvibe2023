@@ -158,7 +158,6 @@ body {
     width: auto;
     max-width: 450px;
     border-radius: 5px;
-    border: 1px solid rgb(159, 0, 0);
 }
 
 .metadata>.left>.poster-container>img {
