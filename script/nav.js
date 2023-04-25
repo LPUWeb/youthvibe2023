@@ -15,7 +15,7 @@ const nav_html = `
     <li><a href="https://youthvibe.lpu.in/faqs.html">FAQs</a></li>
     <li><a href="https://youthvibe.lpu.in/sponsors.html">SPONSORS</a></li>
     <li><a href="https://youthvibe.lpu.in/contactus.html">CONTACT US</a></li>
-    <li><a href="https://schools.lpu.in/youthvibe/register.html" target="_blank" class="call-to-action"> REGISTER</a></li>
+    <li><a href="https://linktr.ee/youthvibe23" target="_blank" class="call-to-action"> REGISTER</a></li>
 </ul>
 <div class="burger" id="burger_menu_btn">
     <img src="assets/icons8-menu-rounded-100.png" alt="nav">
@@ -36,7 +36,7 @@ const nav_html = `
         <li><a href="https://youthvibe.lpu.in/faqs.html">FAQs</a></li>
         <li><a href="https://youthvibe.lpu.in/sponsors.html">SPONSORS</a></li>
         <li><a href="https://youthvibe.lpu.in/contactus.html">CONTACT US</a></li>
-        <li><a href="https://schools.lpu.in/youthvibe/register.html" target="_blank" class="call-to-action">REGISTER</a></li>
+        <li><a href="https://linktr.ee/youthvibe23" target="_blank" class="call-to-action">REGISTER</a></li>
     </ul>
 </div>
 `
