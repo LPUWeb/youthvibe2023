@@ -3,7 +3,7 @@
       document.getElementById("marquee").innerHTML = `
             <div>YOUTHVIBE 2023 is here!</div>
             <div>LPU's Global Open Fest            </div>
-            <div><a style="text-decoration: none;" href="https://schools.lpu.in/youthvibe/register.html" target="_blank">Register Now</a></div>
+            <div><a style="text-decoration: none;" href="https://linktr.ee/youthvibe23" target="_blank">Register Now</a></div>
     `;
 
       $(".owl-carousel").owlCarousel({ //Basic Speeds
